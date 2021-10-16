@@ -13,8 +13,8 @@ const Characterpage = () => {
       <div className="attribute">Eye color: {character.eye_color}</div>
       <div className="attribute">Gender: {character.gender}</div>
       <div className="attribute">Hair color: {character.hair_color}</div>
-      <div className="attribute">Height: {character.height}</div>
-      <div className="attribute">Weight: {character.mass} kg</div>
+      <div className="attribute">Height (cm): {character.height}</div>
+      <div className="attribute">Weight (kg): {character.mass}</div>
       <div className="attribute">Skin Color: {character.skin_color}</div>
     </div>
   )

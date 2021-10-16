@@ -2,13 +2,12 @@ import React from 'react';
 import {Link, useLocation} from 'react-router-dom';
 import useApi from '../../hooks/useApi';
 
-const Detailspage = (props) => {
+const Filmdetailspage = (props) => {
   let location = useLocation();
 
   let characters = useApi(location.state.characters);
   let planets = useApi(location.state.planets);
   let vehicles = useApi(location.state.vehicles);
-
 
   const metaData = () => {
     return (
@@ -36,7 +35,7 @@ const Detailspage = (props) => {
         <p><b>Characters</b></p>
         {
           characters.map((character, index) => 
-            <div className='detail-listing' index={index}>
+            <div className='detail-listing' key={index}>
               <Link to={{ pathname: "/character", state: {data: character} }}>
                 {character.name} 
               </Link>
@@ -47,7 +46,7 @@ const Detailspage = (props) => {
         <p><b>Planets</b></p>
         {
           planets.map((planet, index) => 
-            <div className='detail-listing' index={index}>
+            <div className='detail-listing' key={index}>
               <Link to={{ pathname: "/planet", state: {data: planet} }}>
                 {planet.name} 
               </Link>
@@ -58,7 +57,7 @@ const Detailspage = (props) => {
         <p><b>Vehicles</b></p>
         {
           vehicles.map((vehicle, index) =>  
-            <div className='detail-listing' index={index}>
+            <div className='detail-listing' key={index}>
               <Link to={{ pathname: "/vehicle", state: {data: vehicle} }}>
                 {vehicle.name} 
               </Link>
@@ -71,4 +70,4 @@ const Detailspage = (props) => {
   }
 }
 
-export default Detailspage; 
+export default Filmdetailspage; 
