@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.sass';
+import {Switch, Route} from "react-router-dom";
+import { withRouter } from "react-router";
+import Filmpage from './components/pages/film-page';
+import Filmdetailspage from './components/pages/film-details-page';
+import Vehiclepage from './components/pages/vehicle-page';
+import Characterpage from './components/pages/character-page';
+import Planetpage from './components/pages/planet-page';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Switch>
+				<Route exact path="/"><Filmpage /></Route>
+				<Route path="/details"><Filmdetailspage /></Route>
+        <Route path="/vehicle"><Vehiclepage /></Route>
+        <Route path="/planet"><Planetpage /></Route>
+        <Route path="/character"><Characterpage /></Route>
+			</Switch>
     </div>
   );
 }
 
-export default App;
+export default withRouter(App);
