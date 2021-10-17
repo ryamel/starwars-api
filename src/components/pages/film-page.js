@@ -10,6 +10,7 @@ const Filmpage = () => {
   useEffect(() => {
     axios.get('https://swapi.dev/api/films/')
       .then(res => {
+        console.log(res.data);
         setData(res.data);
       })
       .catch(err => console.log(err));

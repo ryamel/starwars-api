@@ -12,10 +12,10 @@ function App() {
     <div className="App">
       <Switch>
 				<Route exact path="/"><Filmpage /></Route>
-				<Route path="/details"><Filmdetailspage /></Route>
-        <Route path="/vehicle"><Vehiclepage /></Route>
-        <Route path="/planet"><Planetpage /></Route>
-        <Route path="/character"><Characterpage /></Route>
+				<Route path="/details/:id"><Filmdetailspage /></Route>
+        <Route path="/vehicle/:id"><Vehiclepage /></Route>
+        <Route path="/planet/:id"><Planetpage /></Route>
+        <Route path="/character/:id"><Characterpage /></Route>
 			</Switch>
     </div>
   );
