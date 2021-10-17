@@ -1,3 +1,3 @@
 StarWars API
 
-- npm start inside the directory to run
+- npm start inside the main directory to run
