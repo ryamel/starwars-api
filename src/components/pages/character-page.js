@@ -9,11 +9,9 @@ const Characterpage = () => {
 
   useEffect(() => {
     source = axios.CancelToken.source();
-
     axios.get('https://swapi.dev/api/people/' + id, {cancelToken: source.token})
     .then(res => setCharacter(res.data))
     .catch(err => console.log(err));
-    
     return () => {
       source.cancel();
     }

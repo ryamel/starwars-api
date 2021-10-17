@@ -17,7 +17,7 @@ export default function useMovieData(uri) {
         []  // vehicles
       ];
 
-      // create array of promises for each (character, planet, vehicles)
+      // call all promises conatined in character, planet, vehicles
       for (let i = 0; i < res.data.characters.length; i++) {
         promises[0].push(axios.get(res.data.characters[i], {cancelToken: source.token}));
       }
@@ -46,6 +46,7 @@ export default function useMovieData(uri) {
         for (let i=0; i < arr[2].length; i++) {
           res.data.vehicles[i] = arr[2][i].data;
         }
+        // set state
         setData(res.data);
       });
     }

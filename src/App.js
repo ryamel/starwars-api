@@ -1,6 +1,6 @@
 import './App.sass';
 import {Switch, Route} from "react-router-dom";
-import { withRouter } from "react-router";
+import {withRouter} from "react-router";
 import Filmpage from './components/pages/film-page';
 import Filmdetailspage from './components/pages/film-details-page';
 import Vehiclepage from './components/pages/vehicle-page';

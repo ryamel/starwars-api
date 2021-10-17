@@ -1,6 +1,7 @@
 import React from 'react';
 import {Link, useParams} from 'react-router-dom';
 import useMovieData from '../../hooks/useMovieData';
+import './film-details-page.sass';
 
 const Filmdetailspage = (props) => {
   let {id} = useParams();

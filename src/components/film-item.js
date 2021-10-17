@@ -3,7 +3,6 @@ import './film-item.sass';
 import {Link} from "react-router-dom";
 
 const FilmItem = (props) => {
-  // let uriIndex = props.data.url.substr(-2,1);
   return (
     <div className="film-container">
       <Link className="link" to={{pathname: "/details/" + props.data.url.match(/\d+/g).join('')}}>
